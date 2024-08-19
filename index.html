@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supermercado</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-4">
+    <div class="row">
+        <div class="col col-6">
+            <h3>Seleccione un Producto</h3>
+            <form id="formProducto">
+                <div class="mb-3">
+                    <!-- Lista desplegable de productos -->
+                    <label for="producto" class="form-label">Producto</label>
+                    <select class="form-select" id="producto">
+
+                        <option value="pan" 
+                                data-precio="1500" 
+                                data-proveedor="aaa" 
+                                data-duracion="3" 
+                                data-glutem="true">Pan - $1500</option>
+
+                        <option value="leche" data-precio="900">Leche - $900</option>
+                        <option value="arroz" data-precio="1200">Arroz - $1200</option>
+                        <option value="azucar" data-precio="800">Azúcar - $800</option>
+                        <option value="huevos" data-precio="2500">Huevos - $2500</option>
+                    </select>
+                </div>
+                <button type="button" class="btn btn-primary" id="agregarProducto">Agregar Producto</button>
+            </form>
+        </div>
+
+        <div class="col col-6">
+            <h3>Productos Seleccionados</h3>
+            <table class="table" id="tablaProductos">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Productos se agregarán aquí -->
+                </tbody>
+            </table>
+            <h4>Total: $<span id="total">0</span></h4>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="./assets/js/main.js"></script>
+</body>
+</html>
